@@ -14,7 +14,7 @@ import random
 #                   Part of code about arguments to modify                    #
 #                                                                             #
 
-featuresToUse = "CaffeNet4096"  # surf, CaffeNet4096, GoogleNet1024
+featuresToUse = "surf"  # surf, CaffeNet4096, GoogleNet1024
 numberIteration = 10
 adaptationAlgoUsed = ["NA", "SA"]
 # see function adaptData for available algorithms
