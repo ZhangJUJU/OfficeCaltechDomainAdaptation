@@ -48,13 +48,13 @@ def adaptData(algo, sourceData, sourceLabels, targetData, targetLabels):
         # Unsupervised Visual Domain Adaptation Using Subspace Alignment, 2013,
         # Fernando et al.
         from sklearn.decomposition import PCA
-        d = 80  # subspace dimennsion
+        d = 80  # subspace dimension
         pcaS = PCA(d).fit(sourceData)
         pcaT = PCA(d).fit(targetData)
         XS = np.transpose(pcaS.components_)[:, :d]  # source subspace matrix
         XT = np.transpose(pcaT.components_)[:, :d]  # target subspace matrix
         Xa = XS.dot(np.transpose(XS)).dot(XT)  # align source subspace
-        sourceAdapted = sourceData.dot(Xa) # poject source in aligned subspace
+        sourceAdapted = sourceData.dot(Xa) # project source in aligned subspace
         targetAdapted = targetData.dot(XT) # project target in target subspace
 
     return sourceAdapted, targetAdapted
