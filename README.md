@@ -25,7 +25,7 @@ Program launched by executing the main.py script with python:
 python3 main.py
 ```
 
-For each adaptation problem among the 12 possible, each adaptation algorithm chosen at the beginning of the file is applied. Then are reported the mean accuracy and standard deviation. Results:
+For each adaptation problem among the 12 possible, each adaptation algorithm chosen at the beginning of the file is applied. Then are reported the mean accuracy and standard deviation. Results (using the default surf [1] features):
 ```
 Feature used:  surf
 Number of iterations:  10
@@ -72,7 +72,7 @@ Mean results:
      40.5  2.3 SA
 ```
 
-By modifying the feature used in the script with CaffeNet features:
+By modifying the feature used in the script with CaffeNet [2] features:
 ```
 Feature used:  CaffeNet4096
 Number of iterations:  10
@@ -119,7 +119,7 @@ Mean results:
      83.0  1.5 SA
 ```
 
-and with GoogleNet features:
+and with GoogleNet [3] features:
 ```
 Feature used:  GoogleNet1024
 Number of iterations:  10
@@ -165,3 +165,8 @@ Mean results:
      86.8  1.7 NA
      89.1  1.6 SA
 ```
+[1] Gong, B., Grauman, K., & Sha, F. (2014). Learning kernels for unsupervised domain adaptation with applications to visual object recognition. International Journal of Computer Vision, 109(1-2), 3-27.
+
+[2] Jia, Y., Shelhamer, E., Donahue, J., Karayev, S., Long, J., Girshick, R., ... & Darrell, T. (2014, November). Caffe: Convolutional architecture for fast feature embedding. In Proceedings of the 22nd ACM international conference on Multimedia (pp. 675-678). ACM.
+
+[3] Szegedy, C., Liu, W., Jia, Y., Sermanet, P., Reed, S., Anguelov, D., ... & Rabinovich, A. (2015). Going deeper with convolutions. In Proceedings of the IEEE conference on computer vision and pattern recognition (pp. 1-9).
